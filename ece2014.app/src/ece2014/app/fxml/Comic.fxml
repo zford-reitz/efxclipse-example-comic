@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ece2014.app.controllers.ComicController">
+   <center>
+      <GridPane hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" vgap="5.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+          <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+          <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+          <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="m_titleTextField" GridPane.columnIndex="1" />
+            <Label text="Title" />
+            <Label text="Issue #" GridPane.rowIndex="1" />
+            <TextField fx:id="m_issueNumberTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="m_setCoverButton" mnemonicParsing="false" text="Cover" GridPane.rowIndex="2" />
+            <TitledPane collapsible="false" prefHeight="200.0" prefWidth="200.0" text="Cover" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <content>
+                  <ImageView fx:id="m_coverImageView" fitHeight="512.0" fitWidth="512.0" pickOnBounds="true" preserveRatio="true" />
+               </content>
+            </TitledPane>
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <Label fx:id="m_errorMessageLabel" styleClass="error-message" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</BorderPane>

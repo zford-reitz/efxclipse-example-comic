@@ -1,0 +1,24 @@
+/* Main CSS-File */
+
+/* 
+ * light-blue theme
+ * 
+ * -fx-base property is defined and used in the JRE's jfxrt.jar file:
+ *   /com/sun/javafx/scene/control/skin/modena/modena.css
+ * 
+ */
+.root {
+    -fx-base: #7eaacc;
+}
+
+:validation-error {
+	-fx-base: red;
+    -fx-background: derive(-fx-base,26.4%);
+    -fx-control-inner-background: derive(-fx-base,80%);
+}
+
+.error-message {
+	-fx-text-fill: red;
+	-fx-font-style: oblique;
+}
+
